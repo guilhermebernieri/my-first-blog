@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Blog do Guilherme</title>
+</head>
+
+<body>
+    <div>
+        <h1><a href="/">Blog do Guilherme</a></h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>
